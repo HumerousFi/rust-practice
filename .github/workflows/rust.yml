@@ -17,6 +17,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
+      working-directory: ./memory-playground
       run: cargo build --verbose
+    
     - name: Run tests
+      working-directory: ./memory-playground
       run: cargo test --verbose
